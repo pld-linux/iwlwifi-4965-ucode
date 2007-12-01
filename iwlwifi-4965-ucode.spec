@@ -1,12 +1,12 @@
 Summary:	Microcode image for Intel Wireless WiFi Link 4965AGN Adapter
 %define	_module	4965
 Name:		iwlwifi-%{_module}-ucode
-Version:	4.44.1.18
+Version:	4.44.1.20
 Release:	1
 License:	distributable
 Group:		System Environment/Kernel
 Source0:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version}.tgz
-# Source0-md5:	dde401d6dd0bcadff1f04828b70d7463
+# Source0-md5:	6e5c396da265d79d5675fd345adf24cc
 URL:		http://www.intellinuxwireless.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,7 +35,7 @@ interest given the current operating mode of the device.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/lib/firmware
 
-install iwlwifi-%{_module}-1.ucode $RPM_BUILD_ROOT/lib/firmware
+install iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
 install LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
 
 %clean
