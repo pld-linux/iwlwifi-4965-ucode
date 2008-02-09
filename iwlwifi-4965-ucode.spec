@@ -1,5 +1,5 @@
 Summary:	Microcode image for Intel Wireless WiFi Link 4965AGN Adapter
-Summary(pl.UTF-8:	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless WiFi Link 4965AGN
+Summary(pl.UTF-8):	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless WiFi Link 4965AGN
 %define	_module	4965
 Name:		iwlwifi-%{_module}-ucode
 Version:	4.44.1.20
