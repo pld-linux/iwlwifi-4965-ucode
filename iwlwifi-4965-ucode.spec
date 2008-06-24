@@ -13,13 +13,9 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The file iwlwifi-4965-1.ucode provided in this package must be
-present on your system in order for the Intel Wireless WiFi Link
-4965AGN driver for Linux (iwlwifi-4965) to operate on your system.
-
-The "-1" in the filename reflects an interface/architecture version number.
-It will change only when changes in new uCode releases make the new uCode
-incompatible with earlier drivers.
+The file provided in this package must be present on your system in
+order for the Intel Wireless WiFi Link 4965AGN driver for Linux
+(iwlwifi-%{_module}) to operate on your system.
 
 On adapter initialization, and at varying times during the uptime of
 the adapter, the microcode is loaded into the RAM on the network
@@ -30,13 +26,9 @@ be used to keep the host from having to handle packets that are not of
 interest given the current operating mode of the device.
 
 %description -l pl.UTF-8
-Plik iwlwifi-4965-1.ucode dostarczany przez ten pakiet jest wymagany w
-systemie do działania linuksowego sterownika dla układów
-bezprzewodowych Intel Wireless WiFi Link 4965AGN (iwlwifi-4965).
-
-Człon "-1" w nazwie pliku odzwierciedla numer wersji
-interfejsu/architektury. Zmieni się tylko kiedy nowe wydanie mikrokodu
-będzie niekompatybilne z wcześniejszymi wersjami sterowników.
+Plik dostarczany przez ten pakiet jest wymagany w systemie do działania
+linuksowego sterownika dla układów bezprzewodowych Intel Wireless WiFi
+Link 4965AGN (iwlwifi-%{_module}).
 
 Przy inicjalizacji układu i w różnych chwilach w trakcie jego
 działania mikrokod jest wczytywany do pamięci RAM układu. Mikrokod
