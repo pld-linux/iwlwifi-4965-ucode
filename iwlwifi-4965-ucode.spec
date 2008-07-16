@@ -2,12 +2,12 @@ Summary:	Microcode image for Intel Wireless WiFi Link 4965AGN Adapter
 Summary(pl.UTF-8):	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless WiFi Link 4965AGN
 %define	_module	4965
 Name:		iwlwifi-%{_module}-ucode
-Version:	228.57.1.21
+Version:	228.57.2.21
 Release:	1
 License:	distributable
 Group:		Base/Kernel
 Source0:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version}.tgz
-# Source0-md5:	bce5a13d681100aeee2ddac3beaff437
+# Source0-md5:	83804fb4bfa991ffd4849c19a74bf38d
 URL:		http://www.intellinuxwireless.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
