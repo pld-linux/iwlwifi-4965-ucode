@@ -1,13 +1,16 @@
 Summary:	Microcode image for Intel Wireless WiFi Link 4965AGN Adapter
 Summary(pl.UTF-8):	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless WiFi Link 4965AGN
 %define	_module	4965
+%define version1 228.57.1.21
 Name:		iwlwifi-%{_module}-ucode
 Version:	228.57.2.21
-Release:	1
+Release:	2
 License:	distributable
 Group:		Base/Kernel
 Source0:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version}.tgz
 # Source0-md5:	83804fb4bfa991ffd4849c19a74bf38d
+Source1:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version1}.tgz
+# Source1-md5:	bce5a13d681100aeee2ddac3beaff437
 URL:		http://www.intellinuxwireless.org/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,20 +42,22 @@ pakietów, zapobiegające docieraniu do komputera pakietów
 niepotrzebnych w danym trybie pracy urządzenia.
 
 %prep
-%setup -q
+%setup -q -c -a 1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/lib/firmware
 
-install iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
-install LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
+install %{name}-%{version}/iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
+install %{name}-%{version}/LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
+install %{name}-%{version1}/iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
+install %{name}-%{version1}/LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.%{name}
+%doc %{name}-%{version}/README.%{name}
 /lib/firmware/%{name}-LICENSE
 /lib/firmware/*.ucode
