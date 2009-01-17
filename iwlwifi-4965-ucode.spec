@@ -22,7 +22,7 @@ order for the Intel Wireless WiFi Link 4965AGN driver for Linux
 
 On adapter initialization, and at varying times during the uptime of
 the adapter, the microcode is loaded into the RAM on the network
-adapter.  The microcode provides the low level MAC features including
+adapter. The microcode provides the low level MAC features including
 radio control and high precision timing events (backoff, transmit,
 etc.) while also providing varying levels of packet filtering which can
 be used to keep the host from having to handle packets that are not of
@@ -42,22 +42,21 @@ pakietów, zapobiegające docieraniu do komputera pakietów
 niepotrzebnych w danym trybie pracy urządzenia.
 
 %prep
-%setup -q -c -a 1
+%setup -q -a 1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/lib/firmware
 
-install %{name}-%{version}/iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
-install %{name}-%{version}/LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
-install %{name}-%{version1}/iwlwifi-%{_module}-*.ucode $RPM_BUILD_ROOT/lib/firmware
-install %{name}-%{version1}/LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
+install iwlwifi-%{_module}-2.ucode $RPM_BUILD_ROOT/lib/firmware
+install %{name}-%{version1}/iwlwifi-%{_module}-1.ucode $RPM_BUILD_ROOT/lib/firmware
+install LICENSE.%{name} $RPM_BUILD_ROOT/lib/firmware/%{name}-LICENSE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{name}-%{version}/README.%{name}
+%doc README.%{name}
 /lib/firmware/%{name}-LICENSE
 /lib/firmware/*.ucode
