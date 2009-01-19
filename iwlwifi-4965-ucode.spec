@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless 
 %define	_module	4965
 %define version1 228.57.1.21
 Name:		iwlwifi-%{_module}-ucode
-Version:	228.57.2.21
-Release:	2
+Version:	228.57.2.23
+Release:	1
 License:	distributable
 Group:		Base/Kernel
 Source0:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version}.tgz
-# Source0-md5:	83804fb4bfa991ffd4849c19a74bf38d
+# Source0-md5:	505390a555b88c8b6b23057cebec4ad1
 Source1:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version1}.tgz
 # Source1-md5:	bce5a13d681100aeee2ddac3beaff437
 URL:		http://www.intellinuxwireless.org/
