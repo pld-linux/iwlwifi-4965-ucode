@@ -1,10 +1,11 @@
+# NOTE: currently it's included in linux-firmware.spec
 Summary:	Microcode image for Intel Wireless WiFi Link 4965AGN Adapter
 Summary(pl.UTF-8):	Obraz mikrokodu dla układów bezprzewodowych Intel Wireless WiFi Link 4965AGN
 %define	_module	4965
 %define version1 228.57.1.21
 Name:		iwlwifi-%{_module}-ucode
 Version:	228.61.2.24
-Release:	1
+Release:	1.1
 License:	distributable
 Group:		Base/Kernel
 Source0:	http://www.intellinuxwireless.org/iwlwifi/downloads/%{name}-%{version}.tgz
