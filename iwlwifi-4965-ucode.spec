@@ -59,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.%{name}
 /lib/firmware/%{name}-LICENSE
-/lib/firmware/*.ucode
+/lib/firmware/iwlwifi-4965-*.ucode
